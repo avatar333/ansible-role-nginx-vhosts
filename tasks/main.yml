@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible-role-nginx-vhosts
+
+- import_tasks: 010-copy_nginx_main_conf.yml
+  tags: copy_nginx_main_conf
+
+- import_tasks: 020-vhosts.yml
+  tags: vhosts

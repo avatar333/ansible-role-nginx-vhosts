@@ -1,2 +1,15 @@
 ---
 # defaults file for ansible-role-nginx-vhosts
+
+vhost_list:
+  - vhost_name: sonarr
+    app_port: 8989
+  - vhost_name: other
+    app_port: 1111
+
+autofs_files:
+  - fname: galrestore_mounts.autofs.j2
+    dest: /etc/auto.master.d/galrestore_mounts.autofs
+  - fname: auto.galrestore_mounts.j2
+    dest: /etc/auto.galrestore_mounts
+

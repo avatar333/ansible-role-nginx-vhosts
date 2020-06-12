@@ -1,0 +1,8 @@
+---
+
+- name: Create vhosts
+  template:
+    src: vhost_template.conf.j2
+    dest: "/etc/nginx/conf.d/{{ item.vhost_name }}.conf"
+    backup: true
+  loop: "{{ vhost_list }}"

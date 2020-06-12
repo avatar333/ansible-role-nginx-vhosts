@@ -1,0 +1,13 @@
+---
+
+- name: Copy nginx.conf
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx.conf
+    backup: true
+
+- name: Set selinux boolean
+  seboolean:
+    name: httpd_can_network_connect
+    state: yes
+    persistent: yes
