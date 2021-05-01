@@ -4,12 +4,15 @@
 vhost_list:
   - vhost_name: sonarr
     app_port: 8989
-  - vhost_name: other
-    app_port: 1111
-
-autofs_files:
-  - fname: galrestore_mounts.autofs.j2
-    dest: /etc/auto.master.d/galrestore_mounts.autofs
-  - fname: auto.galrestore_mounts.j2
-    dest: /etc/auto.galrestore_mounts
-
+  - vhost_name: deluge
+    app_port: 8112
+  - vhost_name: radarr
+    app_port: 7878
+  - vhost_name: sabnzbd
+    app_port: 8080
+  - vhost_name: jdownloader
+    app_port: 5800
+  - vhost_name: prometheus
+    app_port: 9090
+  - vhost_name: grafan
+    app_port: 3000
